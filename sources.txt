@@ -1,0 +1,10 @@
+Batch file:
+https://www.techtarget.com/searchwindowsserver/definition/batch-file#:~:text=A%20batch%20file%20is%20a,a%20sequence%20in%20the%20system.
+
+we'll work this out using batch files, .bat extension
+
+//take a look .com files though
+
+Batch cmd list:
+https://www.tutorialspoint.com/batch_script/batch_script_commands.htm
+
