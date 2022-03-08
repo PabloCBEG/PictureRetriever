@@ -24,6 +24,10 @@ Copying to a different directory
   https://stackoverflow.com/questions/9125122/how-to-copy-a-file-from-a-folder-to-another-folder
   
 Create folder c++
-  https://iq.opengenus.org/create-and-delete-folder-in-             cpp/#:~:text=Then%20use%20command%20mkdir%20followed,the%20folder%20has%20been%20created.&text=To%20accomplish%20this%20task%20we,with%20the%20specified%20path%20name.
+  https://iq.opengenus.org/create-and-delete-folder-in-cpp/#:~:text=Then%20use%20command%20mkdir%20followed,the%20folder%20has%20been%20created.&text=To%20accomplish%20this%20task%20we,with%20the%20specified%20path%20name.
   https://stackoverflow.com/questions/50960492/creating-folders-in-c
   https://www.geeksforgeeks.org/create-directoryfolder-cc-program/
+
+IN PYTHON
+https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
+https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
