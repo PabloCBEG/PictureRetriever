@@ -7,13 +7,13 @@ we'll work this out using batch files, .bat extension
 
 Batch cmd list:
   https://www.tutorialspoint.com/batch_script/batch_script_commands.htm
-
   https://www.tutorialspoint.com/batch_script/batch_script_input_output.htm
-
-  https://stackoverflow.com/questions/612097/how-can-i-get-the-list-of-files-in-a-directory-using-c-or-c
 
 List of files in a directory
   https://www.delftstack.com/howto/cpp/how-to-get-list-of-files-in-a-directory-cpp/
+  https://en.cppreference.com/w/cpp/filesystem/recursive_directory_iterator
+  https://stackoverflow.com/questions/612097/how-can-i-get-the-list-of-files-in-a-directory-using-c-or-c
+  https://www.delftstack.com/howto/cpp/how-to-get-list-of-files-in-a-directory-cpp/#use-stdfilesystemrecursive_directory_iterator-to-get-a-list-of-files-in-all-subdirectories
 
   Then, filtering list (if (contains "jpg")...)
 
@@ -22,6 +22,7 @@ Copying files
 
 Copying to a different directory
   https://stackoverflow.com/questions/9125122/how-to-copy-a-file-from-a-folder-to-another-folder
+  https://www.delftstack.com/howto/cpp/get-current-directory-cpp/
   
 Create folder c++
   https://iq.opengenus.org/create-and-delete-folder-in-cpp/#:~:text=Then%20use%20command%20mkdir%20followed,the%20folder%20has%20been%20created.&text=To%20accomplish%20this%20task%20we,with%20the%20specified%20path%20name.
@@ -29,5 +30,17 @@ Create folder c++
   https://www.geeksforgeeks.org/create-directoryfolder-cc-program/
 
 IN PYTHON
-https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
-https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
+  https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
+  https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
+
+OTHERS
+Strings
+  https://www.tutorialspoint.com/cplusplus-array-of-strings
+
+Compiling to .exe
+  https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
+  
+Path extension
+  https://docs.microsoft.com/es-es/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensiona?redirectedfrom=MSDN
+  https://stackoverflow.com/questions/51445421/pathfindextensionw-always-return-instead-of-full-extension
+  https://docs.microsoft.com/es-es/windows/win32/api/fileapi/nf-fileapi-findfirstfilea?redirectedfrom=MSDN
