@@ -44,3 +44,8 @@ Path extension
   https://docs.microsoft.com/es-es/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensiona?redirectedfrom=MSDN
   https://stackoverflow.com/questions/51445421/pathfindextensionw-always-return-instead-of-full-extension
   https://docs.microsoft.com/es-es/windows/win32/api/fileapi/nf-fileapi-findfirstfilea?redirectedfrom=MSDN
+
+Boost
+  https://stackoverflow.com/questions/39231363/fatal-error-filesystem-no-such-file-or-directory
+  https://www.boost.org/doc/libs/1_78_0/libs/filesystem/doc/index.htm
+  https://www.boost.org/users/history/version_1_77_0.html
