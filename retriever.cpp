@@ -15,6 +15,9 @@ using std::filesystem::recursive_directory_iterator;
 
 namespace fs = std::filesystem;
 
+//This is the source for Picture Retriever algorithm
+//It'll work it all out, being called from a batchfile
+
 int main()
 {
     int indice;
@@ -43,7 +46,7 @@ int main()
     while(lista_archivos)
     {
       if(PathFindExtension(lista_archivos[indice]) == ".jpg")
-        
+
     }
 
     free(cwd);  //get_current_dir_name makes dynamic memory allocation, so I must free it after I'm done using it
