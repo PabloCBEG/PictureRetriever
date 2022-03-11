@@ -1,21 +1,22 @@
 #include <string.h>
 #include <stdint.h>
 #include <iostream>
-#include <boost/filesystem.hpp>
 #include <direct.h>
 #include <unistd.h>
 #include <exception>
 #include <vector>
+//#include "boost/filesystem.hpp"
+#include "filesystem.hpp"
 
-const char* todas_las_imagenes;
+//const char* todas_las_imagenes;
+std::string todas_las_imagenes;
 
 using std::cout; using std::cin;
 using std::endl; using std::string;
+using std::cerr;
 using std::filesystem::current_path;
 using std::filesystem::directory_iterator;
 using std::filesystem::recursive_directory_iterator;
-
-namespace fs = std::filesystem;
 
 //This is the source for Picture Retriever algorithm
 //It'll work it all out, being called from a batchfile
@@ -30,32 +31,29 @@ int main()
     //    std::cout << entry.path() << std::endl;
 
     //create a new folder for the pictures
-    //cout << "Current working directory: " << current_path() << endl;
-    char *cwd = get_current_dir_name(); //store current directory name in pointer to char cwd
-    cout << "Current working directory: " << cwd << endl;
-    todas_las_imagenes = cwd.append("/todas_las_imagenes"); //could be done using "+" instead of append(), but latter is faster
+
+    //cout << "Current working directory: " << cwd << endl;
+    //const char* cwd = "carpetaNueva";
+    //std::string cwd = "carpetaNueva";
+    //todas_las_imagenes = cwd.append("/todas_las_imagenes"); //could be done using "+" instead of append(), but latter is faster
                                                             //new folder name: "todas_las_imagenes", in order to store pictures
-    if(mkdir(todas_las_imagenes) == -1) //both create directory and check it was succesful //rmdir for removing
+    
+    char dire[5] = "pepe";
+    char* todas_las_imagenes = dire;
+    const char * anado = "/carpetanueva";
+    const char * ruta = strcat(todas_las_imagenes,anado);
+    cout << ruta;
+    if(_mkdir(ruta) == -1) //both create directory and check it was succesful //rmdir for removing
       cerr << "Error al crear el directorio: " << strerror(errno) << endl;
     else cout << "Directorio generado"; //just for debugging
 
     //searching for .jpg images (to be extended to any image extension: .jpeg, .tiff, .png)
-    for (const auto & file : recursive_directory_iterator(cwd)) //ojo: ¿cwd deberia ser tipo string?
-    {
-        //cout << file.path() << endl;
-        lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
-    }
-    indice = 0;
+
+    /*indice = 0;
     while(lista_archivos)
     {
       if(PathFindExtension(lista_archivos[indice]) == ".jpg")
 
-    }
+    }*/
 
-    free(cwd);  //get_current_dir_name makes dynamic memory allocation, so I must free it after I'm done using it
-
-    /*work in progress*///******************************************************************
-    //copying files to folder
-    //fs::path sourceFile = "path/to/sourceFile.ext";
-    //fs::path targetParent = "path/to/target";
 }
