@@ -1,5 +1,5 @@
 # PictureRetriever
-Algorithm that allows user to automatically copy all images in a directory (&amp; branches) to a folder
+Algorithm that allows user to automatically copy all images in a directory (&amp; branches) to a folder.
 This will be done by including compiled programs (.cpp, .o) in a batchfile so as to being able to execute it from cmd window
 OR
 in Python
