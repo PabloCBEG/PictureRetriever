@@ -49,3 +49,4 @@ Boost
   https://stackoverflow.com/questions/39231363/fatal-error-filesystem-no-such-file-or-directory
   https://www.boost.org/doc/libs/1_78_0/libs/filesystem/doc/index.htm
   https://www.boost.org/users/history/version_1_77_0.html
+  https://www.codingame.com/playgrounds/5659/c17-filesystem
