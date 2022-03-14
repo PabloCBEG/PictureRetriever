@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <iostream>
-#include <boost/filesystem.hpp>
+//#include <boost/filesystem.hpp>
 #include <direct.h>
 #include <unistd.h>
 #include <exception>
@@ -9,7 +9,7 @@
 
 const char* todas_las_imagenes;
 
-using std::cout; using std::cin;
+using std::cout; using std::cin; using std::cerr;
 using std::endl; using std::string;
 using std::filesystem::current_path;
 using std::filesystem::directory_iterator;
@@ -40,7 +40,7 @@ int main()
     else cout << "Directorio generado"; //just for debugging
 
     //searching for .jpg images (to be extended to any image extension: .jpeg, .tiff, .png)
-    for (const auto & file : recursive_directory_iterator(cwd)) //ojo: ¿cwd deberia ser tipo string?
+    for (const auto & file : recursive_directory_iterator(cwd)) //ojo: ï¿½cwd deberia ser tipo string?
     {
         //cout << file.path() << endl;
         lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
