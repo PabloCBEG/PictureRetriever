@@ -1,7 +1,7 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
+        /*{
             "label": "build prueba",
             "type": "shell",
             "command": "g++",
@@ -16,6 +16,24 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        }*/
+
+        {
+            "type": "shell",
+            "label": "prueba.exe build active file",
+            "command": "prueba.exe",
+            "args": [
+              "/Zi",
+              "/EHsc",
+              "/Fe:",
+              "${fileDirname}\\${fileBasenameNoExtension}.exe",
+              "${file}"
+            ],
+            "problemMatcher": ["$msCompile"],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          }
     ]
 }

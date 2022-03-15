@@ -7,6 +7,7 @@
 #include <vector>
 //#include "boost/filesystem.hpp"
 //#include "filesystem.hpp"
+#include <filesystem>
 
 //const char* todas_las_imagenes;
 std::string todas_las_imagenes;
@@ -17,7 +18,6 @@ using std::cerr;
 using std::filesystem::current_path;
 using std::filesystem::directory_iterator;
 using std::filesystem::recursive_directory_iterator;
-
 //This is the source for Picture Retriever algorithm
 //It'll work it all out, being called from a batchfile
 
