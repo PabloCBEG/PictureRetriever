@@ -1,17 +1,21 @@
 ***********Log file: we'll be logging progress and actions undertaken through this project here***********
 // Pablo Carmona Benito - Internship at AVS - Added Value Solutions. 7 mar 2022 - 7 jun 2022
 
-7 mar
+7 mar - presentation and initial approach to the problem: retrieving pictures of a project from the folders containing project's information. Stages definition: version 1 must be able to find IMAGE files (.jpg, .jpeg, .png, .tiff ...); version 2 should be able to get also images included in other files (i.e. in a .pdf). *Some research is needed in order to assure this is possible.
 
-8 mar
+8 mar - coding starts. Work'll be done using:
+      · VS Code
+      · DevC++
+      · GitHub
+      Some extra software needs to be installed: MinGW compiler and extensions for C/C++. Particularly, C++17 is needed, and the "filesystem" package from "boost" library
 
-9 mar
+9 mar - permission achieved to install MinGW on AVS computer. Coding goes on (see sources.txt to find the references used). A program is created which allows to create new directories inside of another one.
 
-10 mar
+10 mar - no progress is made on this task. Dedicated to Catalogue.
 
-11 mar
+11 mar - coming to realize that MinGW version installed is an obsolete one: it doesn´t include C++17 version requirements neither boost library (thus nor filesystem pack.). As new permission must be asked, in the meantime, and also looking ahead to do some work at home, coding will be done on personal computer. No information from the Catalogue and projects will be moved outside AVS computer. Little progress, trying to install a valid compiler version.
 
-14 mar
+14 mar - key found to being able to compile. New MinGW version installed (on PC) and filesystem detected as a namespace.
 
 15 mar
 
