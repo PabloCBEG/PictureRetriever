@@ -17,7 +17,7 @@
 
 14 mar - key found to being able to compile. New MinGW version installed (on PC) and filesystem detected as a namespace.
 
-15 mar
+15 mar - research on .exe files in Windows and compilation process in VSCode. DevC++ not useful by now (although compilation is easier, compiler requires to add dependencies to its path, and it's not clear which directories in particular must be directed in path).
 
 16 mar
 
