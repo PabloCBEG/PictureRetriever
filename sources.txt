@@ -50,3 +50,6 @@ Boost
   https://www.boost.org/doc/libs/1_78_0/libs/filesystem/doc/index.htm
   https://www.boost.org/users/history/version_1_77_0.html
   https://www.codingame.com/playgrounds/5659/c17-filesystem
+
+COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working
+  C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
