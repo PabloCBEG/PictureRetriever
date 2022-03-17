@@ -36,6 +36,7 @@ IN PYTHON
 OTHERS
 Vectors (C++)
   https://www.cplusplus.com/reference/vector/vector/push_back/
+  https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them.
 Strings
   https://www.tutorialspoint.com/cplusplus-array-of-strings
 
@@ -47,6 +48,7 @@ Path extension
   https://stackoverflow.com/questions/51445421/pathfindextensionw-always-return-instead-of-full-extension
   https://docs.microsoft.com/es-es/windows/win32/api/fileapi/nf-fileapi-findfirstfilea?redirectedfrom=MSDN
   https://en.cppreference.com/w/cpp/filesystem/path/append
+  https://en.cppreference.com/w/cpp/filesystem/path/extension
 
 Boost
   https://stackoverflow.com/questions/39231363/fatal-error-filesystem-no-such-file-or-directory
@@ -56,3 +58,12 @@ Boost
 
 COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working
   C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
+  
+  https://code.visualstudio.com/docs/cpp/config-msvc
+  https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
+  
+  https://nuwen.net/mingw.html
+  https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/
+  https://www.codingame.com/playgrounds/5659/c17-filesystem
+  https://stackoverflow.com/questions/47872250/cant-compile-code-launch-program-program-path-does-not-exist
+  https://stackoverflow.com/questions/32198383/visual-studio-not-finding-boost-include-files-in-release-mode-works-in-debughttps://stackoverflow.com/questions/55474690/stdfilesystem-has-not-been-declared-after-including-experimental-filesystem
