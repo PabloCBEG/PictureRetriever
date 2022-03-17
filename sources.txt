@@ -44,6 +44,7 @@ Compiling to .exe
   https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
   
 Path extension
+   https://en.cppreference.com/w/cpp/filesystem/path
   https://docs.microsoft.com/es-es/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensiona?redirectedfrom=MSDN
   https://stackoverflow.com/questions/51445421/pathfindextensionw-always-return-instead-of-full-extension
   https://docs.microsoft.com/es-es/windows/win32/api/fileapi/nf-fileapi-findfirstfilea?redirectedfrom=MSDN
