@@ -6,6 +6,7 @@
 #include <exception>
 #include <vector>
 #include <algorithm>
+//#include <fstream>
 //#include <winbase.h>
 #include <filesystem>
 
@@ -22,6 +23,8 @@ using std::filesystem::directory_iterator;
 using std::filesystem::recursive_directory_iterator;
 //This is the source for Picture Retriever algorithm
 //It'll work it all out, being called from a batchfile
+
+
 
 int main()
 {
@@ -44,15 +47,18 @@ int main()
 //***************************************************************************************************************
 
     //searching for .jpg images (to be extended to any image extension: .jpeg, .tiff, .png)
-    for (const auto & file : recursive_directory_iterator(cwd)) //ojo: cwd deberia ser tipo string?
+    for (const auto & file : recursive_directory_iterator(cwd))// /= "..")) //ojo: cwd deberia ser tipo string?
     {
         lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
     }
-    indice = 0;
-    for_each(lista_archivos.begin(), lista_archivos.end(), if(PathFindExtension(lista_archivos[indice]) == ".jpg") )
-    {
-      
 
-    }
+    std::filesystem::copy_file((const std::filesystem::path) cwd /= "Almonte 04.jpg", cwd /= "todas_las_imagenes", true);
+
+    /*for(indice = 0; indice < lista_archivos.size(); indice++)
+    {
+      if((std::filesystem::path(lista_archivos.at(indice)).extension() == ".jpg") || (std::filesystem::path(lista_archivos.at(indice)).extension() == ".JPG"))
+        //std::cout << lista_archivos.at(indice) << "\n"; //for debugging purpose
+        std::filesystem::copy_file(lista_archivos.at(indice), cwd, true);// /= "todas_las_imagenes");//, std::filesystem::copy_options::overwrite_existing);
+    }*/
 
 }
