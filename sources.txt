@@ -34,6 +34,8 @@ IN PYTHON
   https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
 
 OTHERS
+Vectors (C++)
+  https://www.cplusplus.com/reference/vector/vector/push_back/
 Strings
   https://www.tutorialspoint.com/cplusplus-array-of-strings
 
@@ -44,6 +46,7 @@ Path extension
   https://docs.microsoft.com/es-es/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensiona?redirectedfrom=MSDN
   https://stackoverflow.com/questions/51445421/pathfindextensionw-always-return-instead-of-full-extension
   https://docs.microsoft.com/es-es/windows/win32/api/fileapi/nf-fileapi-findfirstfilea?redirectedfrom=MSDN
+  https://en.cppreference.com/w/cpp/filesystem/path/append
 
 Boost
   https://stackoverflow.com/questions/39231363/fatal-error-filesystem-no-such-file-or-directory
