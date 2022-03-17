@@ -1,39 +1,107 @@
 {
-    "version": "2.0.0",
+  /*
+  {
+        "type": "shell",
+        "label": "gcc.exe build active file",
+        "command": "gcc.exe",
+        "args": [
+          "/Zi",
+          "/EHsc",
+          "/Fe:",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "${file}"
+        ],
+        "problemMatcher": [
+          "$msCompile"
+        ],
+        "group": "build"
+      },
+      */  
+  
+  "version": "2.0.0",
     "tasks": [
-        /*{
-            "label": "build prueba",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-std=c++17",
-                "-g",
-                "-o",
-                "prueba.exe",
-                "prueba.cpp"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }*/
-
-        {
-            "type": "shell",
-            "label": "prueba.exe build active file",
-            "command": "prueba.exe",
-            "args": [
-              "/Zi",
-              "/EHsc",
-              "/Fe:",
-              "${fileDirname}\\${fileBasenameNoExtension}.exe",
-              "${file}"
-            ],
-            "problemMatcher": ["$msCompile"],
-            "group": {
-              "kind": "build",
-              "isDefault": true
-            }
-          }
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:/MinGW/bin/g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "C:/MinGW/bin"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: C:/MinGW/bin/g++.exe"
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:\\MinGW\\bin\\g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:\\MinGW\\bin\\g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:\\MinGW\\bin\\g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+      }
     ]
 }
