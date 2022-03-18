@@ -41,6 +41,8 @@ Vectors (C++)
   https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them.
 Strings
   https://www.tutorialspoint.com/cplusplus-array-of-strings
+Function output (return)
+  https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
 
 Compiling to .exe
   https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
@@ -72,6 +74,7 @@ COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working
   
 DEBUGGING
   https://stackoverflow.com/questions/315948/c-catching-all-exceptions
+  https://docs.microsoft.com/en-us/cpp/cpp/try-throw-and-catch-statements-cpp?view=msvc-170
   
   https://nuwen.net/mingw.html
   https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/
