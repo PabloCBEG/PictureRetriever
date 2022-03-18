@@ -19,9 +19,9 @@
 
 15 mar - research on .exe files in Windows and compilation process in VSCode. DevC++ not useful by now (although compilation is easier, compiler requires to add dependencies to its path, and it's not clear which directories in particular must be directed in path).
 
-16 mar
+16 mar - made a safety copy of initial draft, and started working on a test program. Got to succesfully build (.exe) and run code.
 
-17 mar
+17 mar - Some more catalogue work and minor advance in code. Succesfully created direcctories and obtained a path list of the current directory, using std::filesystem.
 
 18 mar
 
