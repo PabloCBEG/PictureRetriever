@@ -50,6 +50,7 @@
         "numbers": "cpp",
         "sstream": "cpp",
         "stdexcept": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "fstream": "cpp"
     }
 }
