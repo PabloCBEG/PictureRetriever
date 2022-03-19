@@ -23,6 +23,7 @@ using fs::copy_options;
 //This is the source for Picture Retriever algorithm
 //It'll work it all out. When built, generates an executable which works ON WINDOWS
 
+//Functions
 void createfolder(fs::path& , fs::path& , fs::path& );
 void iteratefolder(std::vector<fs::path>& , fs::path& );
 void seekforimages(int& , fs::path& , fs::path& , fs::path& , std::vector<fs::path>& );
