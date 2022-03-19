@@ -19,11 +19,15 @@
 
 15 mar - research on .exe files in Windows and compilation process in VSCode. DevC++ not useful by now (although compilation is easier, compiler requires to add dependencies to its path, and it's not clear which directories in particular must be directed in path).
 
-16 mar
+16 mar - made a safety copy of initial draft, and started working on a test program. Got to succesfully build (.exe) and run code.
 
-17 mar
+17 mar - Some more catalogue work and minor advance in code. Succesfully created direcctories and obtained a path list of the current directory, using std::filesystem.
 
-18 mar
+18 mar - successfully fulfilled coding tasks involved in V1. Code works properly. Code is to be arranged and cleaned. If on time, functional .exe will be generated.
+         In order to the code to be more ordered, following modifications are needed:
+         - Creating global variables to deal with needed parameters OR PREFERABLY creating functions that get those parameters and give them back properly edited
+         - No library will be created by now, since it's an easy program, there'll be no more than 3 or 4 functions, and inserting and using libraries might be risky with executable or batch files. Also it's a pain for system migration.
+       - successfully generated functional .exe program which works on Windows
 
 21 mar
 
@@ -44,3 +48,98 @@
 31 mar
 
 1 apr
+
+4 apr
+
+5 apr
+
+6 apr
+
+7 apr
+
+8 apr
+
+11 apr
+
+12 apr
+
+13 apr
+
+14 apr
+
+15 apr
+
+18 apr
+
+19 apr
+
+20 apr
+
+21 apr
+
+22 apr
+
+25 apr
+
+26 apr
+
+27 apr
+
+28 apr
+
+29 apr
+
+2 may
+
+3 may
+
+4 may
+
+5 may
+
+6 may
+
+9 may
+
+10 may
+
+11 may
+
+12 may
+
+13 may
+
+16 may
+
+17 may
+
+18 may
+
+19 may
+
+20 may
+
+23 may
+
+24 may
+
+25 may
+
+26 may
+
+27 may
+
+30 may
+
+31 may
+
+1 jun
+
+2 jun
+
+3 jun
+
+6 jun
+
+7 jun
+
