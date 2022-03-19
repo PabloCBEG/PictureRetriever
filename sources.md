@@ -1,15 +1,15 @@
-Batch file:
+*Batch file*
 1. https://www.techtarget.com/searchwindowsserver/definition/batch-file#:~:text=A%20batch%20file%20is%20a,a%20sequence%20in%20the%20system.
 
 we'll work this out using batch files, .bat extension
 
 //take a look .com files though
 
-Batch cmd list:
+*Batch cmd list*
   1. https://www.tutorialspoint.com/batch_script/batch_script_commands.htm
   2. https://www.tutorialspoint.com/batch_script/batch_script_input_output.htm
 
-List of files in a directory
+*List of files in a directory*
   1. https://www.delftstack.com/howto/cpp/how-to-get-list-of-files-in-a-directory-cpp/
   2. https://en.cppreference.com/w/cpp/filesystem/recursive_directory_iterator
   3. https://stackoverflow.com/questions/612097/how-can-i-get-the-list-of-files-in-a-directory-using-c-or-c
@@ -18,36 +18,36 @@ List of files in a directory
 
   Then, filtering list (if (contains "jpg")...)
 
-Copying files
+*Copying files*
   1. https://stackoverflow.com/questions/10195343/copy-a-file-in-a-sane-safe-and-efficient-way
 
-Copying to a different directory
+*Copying to a different directory*
   1. https://stackoverflow.com/questions/9125122/how-to-copy-a-file-from-a-folder-to-another-folder
   2. https://www.delftstack.com/howto/cpp/get-current-directory-cpp/
   3. https://en.cppreference.com/w/cpp/filesystem/copy_options
   
-Create folder c++
+*Create folder c++*
   1. https://iq.opengenus.org/create-and-delete-folder-in-cpp/#:~:text=Then%20use%20command%20mkdir%20followed,the%20folder%20has%20been%20created.&text=To%20accomplish%20this%20task%20we,with%20the%20specified%20path%20name.
   2. https://stackoverflow.com/questions/50960492/creating-folders-in-c
   3. https://www.geeksforgeeks.org/create-directoryfolder-cc-program/
 
-IN PYTHON
+*IN PYTHON*
   1. https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
   2. https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
 
-OTHERS
-Vectors (C++)
+*OTHERS*
+*Vectors (C++)*
   1. https://www.cplusplus.com/reference/vector/vector/push_back/
   2. https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them.
-Strings
+*Strings*
   1. https://www.tutorialspoint.com/cplusplus-array-of-strings
-Function output (return)
+*Function output (return)*
   1. https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
 
-Compiling to .exe
+*Compiling to .exe*
   1. https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
   
-Path extension
+*Path extension*
   1. https://en.cppreference.com/w/cpp/filesystem/path
   2. https://docs.microsoft.com/es-es/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensiona?redirectedfrom=MSDN
   3. https://stackoverflow.com/questions/51445421/pathfindextensionw-always-return-instead-of-full-extension
@@ -55,24 +55,24 @@ Path extension
   5. https://en.cppreference.com/w/cpp/filesystem/path/append
   6. https://en.cppreference.com/w/cpp/filesystem/path/extension
   
-Paths and recursive iterator stuff: don't wanna go over my new folder
+*Paths and recursive iterator stuff: don't wanna go over my new folder*
   1. https://stackoverflow.com/questions/47865960/stdexperimentalfilesystemrecursive-directory-iterator-skip-folder-and-its
   2. https://en.cppreference.com/w/cpp/filesystem/recursive_directory_iterator/disable_recursion_pending
 
-Boost
+*Boost*
   1. https://www.boost.org/doc/libs/1_75_0/libs/filesystem/doc/reference.html
   2. https://stackoverflow.com/questions/39231363/fatal-error-filesystem-no-such-file-or-directory
   3. https://www.boost.org/doc/libs/1_78_0/libs/filesystem/doc/index.htm
   4. https://www.boost.org/users/history/version_1_77_0.html
   5. https://www.codingame.com/playgrounds/5659/c17-filesystem
 
-COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working
-  C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
+*COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working*
+  1. C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
   
   1. https://code.visualstudio.com/docs/cpp/config-msvc
   2. https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
   
-DEBUGGING
+*DEBUGGING*
   1. https://stackoverflow.com/questions/315948/c-catching-all-exceptions
   2. https://docs.microsoft.com/en-us/cpp/cpp/try-throw-and-catch-statements-cpp?view=msvc-170
   
