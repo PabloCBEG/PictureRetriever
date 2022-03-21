@@ -28,7 +28,7 @@ void createfolder(fs::path& , fs::path& , fs::path& );
 void iteratefolder(std::vector<fs::path>& , fs::path& );
 void seekforimages(int& , fs::path& , fs::path& , fs::path& , std::vector<fs::path>& );
 
-int main()
+int main()en 
 {
     int indice;
     std::vector<fs::path> lista_archivos;     //vector variable used to store filepaths of all files in directory
@@ -53,8 +53,6 @@ void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
     if(create_directory(cwd) == -1)             //both create directory and check it was succesful //rmdir for removing
       cerr << "Error al crear el directorio: " << strerror(errno) << endl;
     else ;//cout << "Directorio generado" << endl; //just for debugging
-
-    //std::vector<fs::path> values {cwd, aux, aux2};
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
