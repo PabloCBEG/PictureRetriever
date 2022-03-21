@@ -36,15 +36,15 @@ we'll work this out using batch files, .bat extension
   2. https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
 
 *OTHERS*
-*Vectors (C++)*
-  1. https://www.cplusplus.com/reference/vector/vector/push_back/
-  2. https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them.
-*Strings*
-  1. https://www.tutorialspoint.com/cplusplus-array-of-strings
-*Function output (return)*
-  1. https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
-*General C++ reference*
-  1. https://www.ibm.com/docs/en/zos/2.4.0?topic=zos-xl-cc
+1. *Vectors (C++)*
+  a. https://www.cplusplus.com/reference/vector/vector/push_back/
+  b. https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them.
+2. *Strings*
+  a. https://www.tutorialspoint.com/cplusplus-array-of-strings
+3. *Function output (return)*
+  a. https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
+4. *General C++ reference*
+  a. https://www.ibm.com/docs/en/zos/2.4.0?topic=zos-xl-cc
 
 *Compiling to .exe*
   1. https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
