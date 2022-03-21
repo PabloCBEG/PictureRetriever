@@ -43,6 +43,8 @@ we'll work this out using batch files, .bat extension
   1. https://www.tutorialspoint.com/cplusplus-array-of-strings
 *Function output (return)*
   1. https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
+*General C++ reference*
+  1. https://www.ibm.com/docs/en/zos/2.4.0?topic=zos-xl-cc
 
 *Compiling to .exe*
   1. https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
