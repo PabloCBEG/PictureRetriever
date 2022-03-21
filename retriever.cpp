@@ -54,7 +54,7 @@ void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
       cerr << "Error al crear el directorio: " << strerror(errno) << endl;
     else ;//cout << "Directorio generado" << endl; //just for debugging
 
-    std::vector<fs::path> values {cwd, aux, aux2};
+    //std::vector<fs::path> values {cwd, aux, aux2};
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
@@ -69,7 +69,7 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
         it.disable_recursion_pending();
       lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
   }
-  /*NOTE: I know there's at least a better way to work out this list, avoiding the latter filter
+  /*NOTE: I guess there's at least a better way to work out this list, avoiding the latter filter
     by just applying it now. That way, list is shorter and filter's for loop iterates fewer times,
     since list contains only images. But in order to do so I should change for loop in this function,
     and I'm not willing to do so by now. May do it at some point.*/
@@ -92,16 +92,16 @@ void seekforimages(int& indice, fs::path& imagen, fs::path& cwd, fs::path& aux2,
       (fs::path(lista_archivos.at(indice)).extension() == ".jpeg") ||
       (fs::path(lista_archivos.at(indice)).extension() == ".JPEG"))
     {
-      
+
       imagen = lista_archivos.at(indice).filename();
 
       // Show all errors concerning filesystem
       try{
       fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
-      } catch(fs::filesystem_error& e)
-      {
-        std::cout << "Error: " << e.what() << endl;
-      }
-    }
+    } catch(fs::filesystem_error& e)  //we have some trouble whith overwriting existing files, because we may have different images w the same name.
+      {                               //in order to fix that:
+        std::cout << "Error: " << e.what() << endl;     //·Either add a condition to compare sizes
+      }                                                 //·Or compare date of creation information
+    }                                                   //·Or avoid overwriting and just take the risk of duplicating some images (which may not be a big deal)
   }
 }
