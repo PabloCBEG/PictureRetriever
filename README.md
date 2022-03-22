@@ -11,3 +11,4 @@ The action includes:
 3. Copying all those images in the new folder
 
 *Aim: make it portable. i.e. NOT using std::filesystem nor any boost dependencies
+*Aim: make it w Python
