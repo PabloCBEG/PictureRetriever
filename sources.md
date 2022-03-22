@@ -31,6 +31,11 @@ we'll work this out using batch files, .bat extension
   2. https://stackoverflow.com/questions/50960492/creating-folders-in-c
   3. https://www.geeksforgeeks.org/create-directoryfolder-cc-program/
 
+*File size*
+  1. https://stackoverflow.com/questions/5840148/how-can-i-get-a-files-size-in-c
+  2. https://techoverflow.net/2013/08/21/how-to-get-filesize-using-stat-in-cc/
+  3. https://pubs.opengroup.org/onlinepubs/007904875/basedefs/sys/stat.h.html
+
 *IN PYTHON*
   1. https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
   2. https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
