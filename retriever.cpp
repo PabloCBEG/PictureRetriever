@@ -103,7 +103,7 @@ void seekforimages(int& indice, fs::path& imagen, fs::path& cwd, fs::path& aux2,
         if()
           fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
         else
-
+          fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::skip_existing);
       } catch(fs::filesystem_error& e)  //arreglar: o comarar size, o no overwrie, sino 2licar.
       {                                 //o comparando fecha de captura (metadata, detalles)
         std::cout << "Error: " << e.what() << endl;
@@ -121,3 +121,10 @@ size_t getFilesize(const std::string& nombre)
   }
   return st.st_size;
 }
+
+//to check filesize:
+/*
+  Create a new vector object: there we'll store different file sizes.
+  Compare new file name to the whole list of already registered files. ONLY images.
+  IF two files have same name, we'll compare their sizes.
+*/
