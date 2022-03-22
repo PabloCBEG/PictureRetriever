@@ -105,3 +105,10 @@ void seekforimages(int& indice, fs::path& imagen, fs::path& cwd, fs::path& aux2,
     }
   }
 }
+
+//to check filesize:
+/*
+  Create a new vector object: there we'll store different file sizes.
+  Compare new file name to the whole list of already registered files. ONLY images.
+  IF two files have same name, we'll compare their sizes.
+*/
