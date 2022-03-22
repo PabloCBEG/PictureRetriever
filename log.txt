@@ -29,9 +29,9 @@
          - No library will be created by now, since it's an easy program, there'll be no more than 3 or 4 functions, and inserting and using libraries might be risky with executable or batch files. Also it's a pain for system migration.
        - successfully generated functional .exe program which works on Windows
 
-21 mar
+21 mar - clarifyng comments added, useless comments and variables deleted, synchronized with the repo, started report of V1
 
-22 mar
+22 mar - created GitHub release v1, finished report V1. Started fixes for v2
 
 23 mar
 
