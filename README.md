@@ -3,7 +3,7 @@ Algorithm that allows user to automatically copy all images in a directory (&amp
 *This will be done by including compiled programs (.cpp, .o) in a batchfile so as to being able to execute it from cmd window
 OR
 in Python*
-It was finally done just by building .cpp program, getting an executable which works ON WINDOWS
+It was finally done just by building .cpp program, getting an executable
 
 The action includes:
 1. Searching for .jpg / .png / .tiff : easily extensible to other kind of image files (parameter inside *if* statement)
