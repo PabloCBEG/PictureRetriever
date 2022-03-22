@@ -7,6 +7,7 @@
 #include <vector>
 #include <algorithm>
 #include <filesystem>
+#include <sys/stat.h>
 
 namespace fs = std::filesystem;
 
@@ -27,6 +28,8 @@ using fs::copy_options;
 void createfolder(fs::path& , fs::path& , fs::path& );
 void iteratefolder(std::vector<fs::path>& , fs::path& );
 void seekforimages(int& , fs::path& , fs::path& , fs::path& , std::vector<fs::path>& );
+
+size_t getFilesize(const std::string& );
 
 int main()
 {
@@ -97,11 +100,24 @@ void seekforimages(int& indice, fs::path& imagen, fs::path& cwd, fs::path& aux2,
 
       // Show all errors concerning filesystem
       try{
-      fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
-      } catch(fs::filesystem_error& e)
-      {
+        if()
+          fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
+        else
+
+      } catch(fs::filesystem_error& e)  //arreglar: o comarar size, o no overwrie, sino 2licar.
+      {                                 //o comparando fecha de captura (metadata, detalles)
         std::cout << "Error: " << e.what() << endl;
       }
     }
   }
+}
+
+size_t getFilesize(const std::string& nombre)
+{
+  struct stat st;
+  if(stat(nombre.c_str(), &st) != 0)
+  {
+    return 0;
+  }
+  return st.st_size;
 }
