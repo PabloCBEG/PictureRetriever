@@ -27,22 +27,24 @@ using fs::copy_options;
 //Functions
 void createfolder(fs::path& , fs::path& , fs::path& );
 void iteratefolder(std::vector<fs::path>& , fs::path& );
-void seekforimages(int& , fs::path& , fs::path& , fs::path& , std::vector<fs::path>& );
+void seekforimages(fs::path& , fs::path& , fs::path& , std::vector<fs::path>& );
 
 size_t getFilesize(const std::string& );
 
+void filterlist(std::vector<fs::path>& );
+
 int main()
 {
-    int indice;
     std::vector<fs::path> lista_archivos;     //vector variable used to store filepaths of all files in directory
-    fs::path imagen;
     fs::path cwd; fs::path aux; fs::path aux2;
 
     createfolder(cwd, aux, aux2);
 
     iteratefolder(lista_archivos, aux);
-
-    seekforimages(indice, imagen, cwd, aux2, lista_archivos);
+  //cout << "todo bien" << endl;
+  
+  //cout << "todo bien" << endl;
+    seekforimages(cwd, aux2, lista_archivos);
 }
 
 void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
@@ -64,55 +66,76 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
 {
   //iterates current dir; generates a path list
   recursive_directory_iterator it;  //variable of type rec.dir.iterator so it can be used as a "pointer" to the current directory when iterating
-
   //searching for .jpg images, extended to any image extension: .jpeg, .tiff, .png, .jfif
   for (const auto & file : it = recursive_directory_iterator(aux))
   {
-      if(fs::current_path().filename() == "todas_las_imagenes")
-        it.disable_recursion_pending();
-      lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
+    lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
+
+    if((file.path().extension() == ".jpg") ||
+      (file.path().extension() == ".JPG") ||
+      (file.path().extension() == ".png") ||
+      (file.path().extension() == ".PNG") ||
+      (file.path().extension() == ".tiff") ||
+      (file.path().extension() == ".TIFF") ||
+      (file.path().extension() == ".jfif") ||
+      (file.path().extension() == ".JFIF") ||
+      (file.path().extension() == ".jpeg") ||
+      (file.path().extension() == ".JPEG"));
+    else 
+    {
+      lista_archivos.pop_back();
+    }
+    
+    if(fs::current_path().filename() == "todas_las_imagenes") //not entering newly created folder, for I'd found duplicates
+      it.disable_recursion_pending();
+      
   }
-  /*NOTE: I know there's at least a better way to work out this list, avoiding the latter filter
-    by just applying it now. That way, list is shorter and filter's for loop iterates fewer times,
-    since list contains only images. But in order to do so I should change for loop in this function,
-    and I'm not willing to do so by now. May do it at some point.*/
 }
 
-void seekforimages(int& indice, fs::path& imagen, fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_archivos)
+void filterlist(std::vector<fs::path>& lista_archivos)
 {
-  //looks for the images and COPIES them to the desired folder (new folder created)
-  for(indice = 0; indice < lista_archivos.size(); indice++)
+  int i, j;
+  for(i = 0; i < lista_archivos.size(); i++)
   {
-    cwd = aux2;
-    if((fs::path(lista_archivos.at(indice)).extension() == ".jpg") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".JPG") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".png") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".PNG") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".tiff") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".TIFF") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".jfif") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".JFIF") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".jpeg") ||
-      (fs::path(lista_archivos.at(indice)).extension() == ".JPEG"))
+    for(j = 0; j < lista_archivos.size(); j++)
     {
-      
-      imagen = lista_archivos.at(indice).filename();
-
-      // Show all errors concerning filesystem
-      try{
+      if(lista_archivos.at(i).filename() == lista_archivos.at(j).filename() && i != j)
+      {
         if()
-          fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
-        else
-          fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::skip_existing);
-      } catch(fs::filesystem_error& e)  //arreglar: o comarar size, o no overwrie, sino 2licar.
-      {                                 //o comparando fecha de captura (metadata, detalles)
-        std::cout << "Error: " << e.what() << endl;
       }
     }
   }
 }
 
-size_t getFilesize(const std::string& nombre)
+void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_archivos)
+{
+  //looks for the images and COPIES them to the desired folder (new folder created)
+
+  int indice;
+  fs::path imagen;
+
+  cwd = aux2;
+
+  for(indice = 0; indice < lista_archivos.size(); indice++)
+  {
+    imagen = lista_archivos.at(indice).filename();
+
+    fs::path imagen_aux;
+
+    // Show all errors concerning filesystem
+    try{
+
+        fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
+
+        //fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::skip_existing);
+    } catch(fs::filesystem_error& e)  //arreglar: o comparar size, o no overwrite, sino duplicar.
+    {                                 //o comparando fecha de captura (metadata, detalles)
+      std::cout << "Error: " << e.what() << endl;
+    }
+  }
+}
+
+/*size_t getFilesize(const std::string& nombre)
 {
   struct stat st;
   if(stat(nombre.c_str(), &st) != 0)
@@ -120,7 +143,7 @@ size_t getFilesize(const std::string& nombre)
     return 0;
   }
   return st.st_size;
-}
+}*/
 
 //to check filesize:
 /*
