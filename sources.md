@@ -43,7 +43,8 @@ we'll work this out using batch files, .bat extension
 *OTHERS*
 1. *Vectors (C++)*
   a) https://www.cplusplus.com/reference/vector/vector/push_back/
-  b) https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them.
+  b) https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them
+  c) https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
 2. *Strings*
   a) https://www.tutorialspoint.com/cplusplus-array-of-strings
 3. *Function output (return)*
