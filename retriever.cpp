@@ -27,39 +27,37 @@ using fs::copy_options;
 //Functions
 void createfolder(fs::path& , fs::path& , fs::path& );
 void iteratefolder(std::vector<fs::path>& , fs::path& );
-void seekforimages(fs::path& , fs::path& , fs::path& , std::vector<fs::path>& );
+void seekforimages(fs::path& , fs::path& , std::vector<fs::path>& , std::vector<fs::path>& );
 
-size_t getFilesize(const std::string& );
-
-void filterlist(std::vector<fs::path>& );
+void filterlist(std::vector<fs::path>& , std::vector<fs::path>& );
 
 int main()
 {
     std::vector<fs::path> lista_archivos;     //vector variable used to store filepaths of all files in directory
     fs::path cwd; fs::path aux; fs::path aux2;
+    std::vector<fs::path> lista_archivos_aux;
 
     createfolder(cwd, aux, aux2);
 
     iteratefolder(lista_archivos, aux);
   //cout << "todo bien" << endl;
-  
   //cout << "todo bien" << endl;
-    seekforimages(cwd, aux2, lista_archivos);
+    seekforimages(cwd, aux2, lista_archivos, lista_archivos_aux);
 }
 
 void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
 {
   //create a new folder for the pictures
-    cwd = current_path();                       //store current directory name in pointer to char cwd
-    aux = cwd;                                  //auxiliar variable for future operations
-    cwd /= "todas_las_imagenes";                //append new folder name to current directory path
-    aux2 = cwd;                                 //save this path too, for the future (for cwd'll be later manipulated)
+  cwd = current_path();                       //store current directory name in pointer to char cwd
+  aux = cwd;                                  //auxiliar variable for future operations
+  cwd /= "todas_las_imagenes";                //append new folder name to current directory path
+  aux2 = cwd;                                 //save this path too, for the future (for cwd'll be later manipulated)
 
-    if(create_directory(cwd) == -1)             //both create directory and check it was succesful //rmdir for removing
-      cerr << "Error al crear el directorio: " << strerror(errno) << endl;
-    else ;//cout << "Directorio generado" << endl; //just for debugging
+  if(create_directory(cwd) == -1)             //both create directory and check it was succesful //rmdir for removing
+    cerr << "Error al crear el directorio: " << strerror(errno) << endl;
+  else ;//cout << "Directorio generado" << endl; //just for debugging
 
-    std::vector<fs::path> values {cwd, aux, aux2};
+  std::vector<fs::path> values {cwd, aux, aux2};
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
@@ -88,46 +86,65 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
     
     if(fs::current_path().filename() == "todas_las_imagenes") //not entering newly created folder, for I'd found duplicates
       it.disable_recursion_pending();
-      
   }
 }
 
-void filterlist(std::vector<fs::path>& lista_archivos)
+void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
 {
-  int i, j;
+  uint32_t i, j;
+  lista_archivos_aux = lista_archivos;
   for(i = 0; i < lista_archivos.size(); i++)
   {
     for(j = 0; j < lista_archivos.size(); j++)
     {
-      if(lista_archivos.at(i).filename() == lista_archivos.at(j).filename() && i != j)
+
+      if(lista_archivos.at(i).filename() == lista_archivos.at(j).filename() && i != j && lista_archivos_aux.at(i).filename() == lista_archivos_aux.at(j).filename()) //fs::path(lista_archivos.at(i)).compare(lista_archivos.at(j)) && i != j
       {
-        if()
+        uint32_t tam1 = fs::file_size(lista_archivos.at(i));
+        uint32_t tam2 = fs::file_size(lista_archivos.at(j));
+        if(tam1 == tam2)
+        {
+          lista_archivos.erase(lista_archivos.begin() + j);
+          lista_archivos_aux.erase(lista_archivos_aux.begin() + j);
+        }
+        else
+        {
+          fs::path ex = lista_archivos.at(j).extension();
+          fs::path nuevo = "1";
+          fs::path termin = nuevo += ex;
+          //fs::path(lista_archivos.at(j)).replace_extension();// += "1";//*****problem here. dont know if replacing is working
+          lista_archivos_aux.at(j).replace_extension();
+          //cout << lista_archivos.at(j).filename() << endl;
+          lista_archivos_aux.at(j) += termin;
+          //cout << lista_archivos.at(j).filename() << endl;
+        }
       }
     }
   }
+  for(i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl; cout << fs::path(lista_archivos_aux.at(i)) << endl; }
 }
 
-void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_archivos)
+void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
 {
   //looks for the images and COPIES them to the desired folder (new folder created)
 
-  int indice;
+  uint32_t indice;
   fs::path imagen;
 
-  cwd = aux2;
+  filterlist(lista_archivos, lista_archivos_aux);
 
   for(indice = 0; indice < lista_archivos.size(); indice++)
   {
-    imagen = lista_archivos.at(indice).filename();
+    imagen = lista_archivos_aux.at(indice).filename();
 
-    fs::path imagen_aux;
+    cwd = aux2;
 
     // Show all errors concerning filesystem
     try{
 
-        fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
-
         //fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::skip_existing);
+
+        fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
     } catch(fs::filesystem_error& e)  //arreglar: o comparar size, o no overwrite, sino duplicar.
     {                                 //o comparando fecha de captura (metadata, detalles)
       std::cout << "Error: " << e.what() << endl;
