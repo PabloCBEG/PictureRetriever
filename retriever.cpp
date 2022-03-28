@@ -1,4 +1,5 @@
 #include <string.h>
+#include <string>
 #include <stdint.h>
 #include <iostream>
 #include <direct.h>
@@ -8,6 +9,7 @@
 #include <algorithm>
 #include <filesystem>
 #include <sys/stat.h>
+#include <sstream>
 
 namespace fs = std::filesystem;
 
@@ -110,9 +112,13 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
         else
         {
           fs::path ex = lista_archivos.at(j).extension();
-          fs::path nuevo = "1";
+          const char* indice_aux = std::to_string(i).c_str();
+          fs::path nuevo = "_repeated_name_";
+          nuevo += indice_aux;  //adding i index to the name guarantees no name is going to repeat:
+                                //i.e., if we had 3 files w same name but different sizes,
+                                //they'd be at different positions within the list, hence have different
+                                //i index in for loop
           fs::path termin = nuevo += ex;
-          //fs::path(lista_archivos.at(j)).replace_extension();// += "1";//*****problem here. dont know if replacing is working
           lista_archivos_aux.at(j).replace_extension();
           //cout << lista_archivos.at(j).filename() << endl;
           lista_archivos_aux.at(j) += termin;
@@ -121,7 +127,7 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
       }
     }
   }
-  for(i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl; cout << fs::path(lista_archivos_aux.at(i)) << endl; }
+  //for(i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl; cout << fs::path(lista_archivos_aux.at(i)) << endl; }
 }
 
 void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
@@ -151,16 +157,6 @@ void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_a
     }
   }
 }
-
-/*size_t getFilesize(const std::string& nombre)
-{
-  struct stat st;
-  if(stat(nombre.c_str(), &st) != 0)
-  {
-    return 0;
-  }
-  return st.st_size;
-}*/
 
 //to check filesize:
 /*
