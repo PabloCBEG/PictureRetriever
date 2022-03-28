@@ -37,9 +37,9 @@
 
 24 mar - no progress. Catalogue work
 
-25 mar
+25 mar - kept working on fixes for v2: list cleaning of repeated files, renaming files w same nime but different SIZES
 
-28 mar
+28 mar - achieved a working version which renames files w same name but different sizes. Proceeding to clean code.
 
 29 mar
 
