@@ -41,7 +41,7 @@
 
 28 mar - achieved a working version which renames files w same name but different sizes. Proceeding to clean code.
 
-29 mar
+29 mar - catalogue work
 
 30 mar
 
