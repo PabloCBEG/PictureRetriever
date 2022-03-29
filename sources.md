@@ -47,6 +47,7 @@ we'll work this out using batch files, .bat extension
   c) https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
 2. *Strings*
   a) https://www.tutorialspoint.com/cplusplus-array-of-strings
+  b) https://stackoverflow.com/questions/10847237/how-to-convert-from-int-to-char
 3. *Function output (return)*
   a) https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
 4. *General C++ reference*
