@@ -103,3 +103,13 @@ void seekforimages(int& indice, fs::path& imagen, fs::path& cwd, fs::path& aux2,
     }                                                   //·Or avoid overwriting and just take the risk of duplicating some images (which may not be a big deal)
   }
 }
+<<<<<<< HEAD
+=======
+
+//to check filesize:
+/*
+  Create a new vector object: there we'll store different file sizes.
+  Compare new file name to the whole list of already registered files. ONLY images.
+  IF two files have same name, we'll compare their sizes.
+*/
+>>>>>>> 66915fc32fbf12e26a2f66d58bf9cf1f32ad6b4f
