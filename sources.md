@@ -39,6 +39,7 @@ we'll work this out using batch files, .bat extension
 *File modification time*
   1. https://stackoverflow.com/questions/40504281/c-how-to-check-the-last-modified-time-of-a-file
   2. https://en.cppreference.com/w/cpp/filesystem/last_write_time
+  3. https://www.windows-commandline.com/get-file-modified-date-time/
 
 *IN PYTHON*
   1. https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
@@ -56,6 +57,8 @@ we'll work this out using batch files, .bat extension
   a) https://stackoverflow.com/questions/6394741/can-a-c-function-return-more-than-one-value
 4. *General C++ reference*
   a) https://www.ibm.com/docs/en/zos/2.4.0?topic=zos-xl-cc
+5. *Code optimization*
+  a) https://www.windows-commandline.com/get-file-modified-date-time/
 
 *Compiling to .exe*
   1. https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
