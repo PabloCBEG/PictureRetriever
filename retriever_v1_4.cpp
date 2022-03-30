@@ -62,8 +62,6 @@ void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
   if(create_directory(cwd) == -1)             //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
   else ;//cout << "Directorio generado" << endl; //just for debugging
-
-  std::vector<fs::path> values {cwd, aux, aux2};
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
@@ -82,7 +80,7 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
       (file.path().extension() == ".jfif") || (file.path().extension() == ".JFIF") ||
       (file.path().extension() == ".jpeg") || (file.path().extension() == ".JPEG") ||
       (file.path().extension() == ".svg") || (file.path().extension() == ".SVG") ||
-      (file.path().extension() == ".mp4") || //akes a while o coy video files
+      (file.path().extension() == ".mp4") || //takes a while to copy video files
       (file.path().extension() == ".MP4") ||
       (file.path().extension() == ".mkv") || (file.path().extension() == ".MKV") ||
       (file.path().extension() == ".gif") || (file.path().extension() == ".GIF") ||

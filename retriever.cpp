@@ -28,7 +28,7 @@ using std::basic_string;
 //It'll work it all out. When built, generates an executable which works ON WINDOWS
 
 //Functions
-void createfolder(fs::path& , fs::path& , fs::path& );
+void createfolder(fs::path& , fs::path& , fs::path& , fs::path& );
 void iteratefolder(std::vector<fs::path>& , fs::path& );
 void seekforimages(fs::path& , fs::path& , std::vector<fs::path>& , std::vector<fs::path>& );
 
@@ -37,43 +37,50 @@ void filterlist(std::vector<fs::path>& , std::vector<fs::path>& );
 int main()
 {
     std::vector<fs::path> lista_archivos;     //vector variable used to store filepaths of all files in directory
-    fs::path cwd; fs::path aux; fs::path aux2;
+    fs::path targetdirectory; fs::path destinydirectory; fs::path aux; fs::path aux2;
     std::vector<fs::path> lista_archivos_aux;
-
-    cout << "Hold on while we work it out for you..." << endl;
     
-    createfolder(cwd, aux, aux2);
+    createfolder(targetdirectory, destinydirectory, aux, aux2);
+
+    cout << "Hold on while we work this out for you. You can keep working on something else..." << endl;
 
     iteratefolder(lista_archivos, aux);
 
-    seekforimages(cwd, aux2, lista_archivos, lista_archivos_aux);
+    seekforimages(destinydirectory, aux2, lista_archivos, lista_archivos_aux);
 
     cout << "Done working. Thanks for waiting" << endl;
 }
 
-void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
+void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::path& aux, fs::path& aux2)
 {
   //create a new folder for the pictures
 
-  std::string saux;
+  std::string saux; //auxiliary string variable to store cin input
+  //Ask for target directory
   std::cout << "Introduzca la ruta completa del directorio donde quiere realizar la busqueda: ";
-  std::getline(std::cin, saux);               
-  cwd = saux;                                 //store target directory name in path cwd
-  cout << fs::path(cwd) << endl;
-  aux = cwd;                                  //auxiliar variable for future operations
-  cwd /= "todas_las_imagenes";                //append new folder name to current directory path
-  aux2 = cwd;                                 //save this path too, for the future (for cwd'll be later manipulated)
+  std::getline(std::cin, saux);
+  targetdirectory = saux;                                 //store target directory name in path cwd
+  //cout << fs::path(targetdirectory) << endl;
 
-  if(create_directory(cwd) == -1)             //both create directory and check it was succesful //rmdir for removing
+  //ask for destiny directory
+  std::cout << "Introduzca la ruta completa del directorio donde quiere almacenar las imagenes: ";
+  std::getline(std::cin, saux);
+  destinydirectory = saux;
+
+  aux = targetdirectory;                                  //auxiliar variable for future operations
+  destinydirectory /= "todas_las_imagenes";                //append new folder name to current directory path
+  aux2 = destinydirectory;                                //save this path too, for the future (for cwd'll be later manipulated)
+
+  if(create_directory(destinydirectory) == -1)             //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
   else ; cout << "Directorio generado" << endl; //just for debugging
 
-  std::vector<fs::path> values {cwd, aux, aux2};
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
 {
   //iterates current dir; generates a path list
+  //uses targetdirectory (aux must be targetdirectory)
 
   recursive_directory_iterator it;  //variable of type rec.dir.iterator so it can be used as a "pointer" to the current directory when iterating
   //searching for .jpg images, extended to any image extension: .jpeg, .tiff, .png, .jfif
@@ -87,7 +94,7 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
       (file.path().extension() == ".jfif") || (file.path().extension() == ".JFIF") ||
       (file.path().extension() == ".jpeg") || (file.path().extension() == ".JPEG") ||
       (file.path().extension() == ".svg") || (file.path().extension() == ".SVG") ||
-      (file.path().extension() == ".mp4") || //akes a while o coy video files
+      (file.path().extension() == ".mp4") || //takes a while to copy video files
       (file.path().extension() == ".MP4") ||
       (file.path().extension() == ".mkv") || (file.path().extension() == ".MKV") ||
       (file.path().extension() == ".gif") || (file.path().extension() == ".GIF") ||
@@ -111,7 +118,7 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
 {
   //filters list: removes repeated files comparing size and date of modification. Works for images and video files.
   //              different filtering criteria should be used for document files
-
+//******error in this function***** not getting the images w duplicate names renamed and so on
   uint32_t i, j;
   lista_archivos_aux = lista_archivos;
   for(i = 0; i < lista_archivos.size(); i++)
@@ -151,9 +158,10 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
   //for(i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl; cout << fs::path(lista_archivos_aux.at(i)) << endl; }
 }
 
-void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
+void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
 {
   //looks for the images and COPIES them to the desired folder (new folder created)
+  //uses destinydirectory: aux2 must be destinydirectory
 
   uint32_t indice;
   fs::path imagen;
@@ -164,12 +172,12 @@ void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_a
   {
     imagen = lista_archivos_aux.at(indice).filename();
 
-    cwd = aux2;
+    destinydirectory = aux2;
 
     // Show all errors concerning filesystem
     try
     {
-      fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
+      fs::copy_file((const fs::path)lista_archivos.at(indice), destinydirectory /= imagen, copy_options::overwrite_existing);
     }
     catch(fs::filesystem_error& e)
     {
