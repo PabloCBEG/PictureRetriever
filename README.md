@@ -10,5 +10,7 @@ The action includes:
 2. Creating new folder in parent directory
 3. Copying all those images in the new folder
 
-*Aim: make it portable. i.e. NOT using std::filesystem nor any boost dependencies
+Note:
+1. Added video files
+
 *Aim: make it w Python
