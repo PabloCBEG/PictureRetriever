@@ -53,8 +53,8 @@ int main()
 void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
 {
   //create a new folder for the pictures
-  cout << "Introduzca la ruta completa del directorio donde quiere realizar la búsqueda: " << endl;
-  cin >> cwd;                       //store current directory name in pointer to char cwd
+
+  cwd = current_path();                       //store current directory name in pointer to char cwd
   aux = cwd;                                  //auxiliar variable for future operations
   cwd /= "todas_las_imagenes";                //append new folder name to current directory path
   aux2 = cwd;                                 //save this path too, for the future (for cwd'll be later manipulated)
