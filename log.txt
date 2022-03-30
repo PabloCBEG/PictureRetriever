@@ -4,7 +4,7 @@
 7 mar - presentation and initial approach to the problem: retrieving pictures of a project from the folders containing project's information. Stages definition: version 1 must be able to find IMAGE files (.jpg, .jpeg, .png, .tiff ...); version 2 should be able to get also images included in other files (i.e. in a .pdf). *Some research is needed in order to assure this is possible.
 
 8 mar - coding starts. Work'll be done using:
-      · VS Code
+      · VS Code / Atom
       · DevC++
       · GitHub
       Some extra software needs to be installed: MinGW compiler and extensions for C/C++. Particularly, C++17 is needed, and the "filesystem" package from "boost" library
@@ -43,7 +43,7 @@
 
 29 mar - catalogue work
 
-30 mar
+30 mar - made needed changes so that program filters video files too. Working version. Also added filtering condition: check last modification date; if two files in list have same modification date, they'll be suspected to be the same file. I discourage using this filter condition alone, for two files may have different modification dates and still be the same file. Size condition looks robust, and combining both is robust for sure. We'll shallowly test for operation time and then decide if size condition is to be used on its own, or it'll be combined w/ date information
 
 31 mar
 
