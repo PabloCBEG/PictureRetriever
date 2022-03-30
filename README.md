@@ -9,9 +9,5 @@ The action includes:
 1. Searching for .jpg / .png / .tiff : easily extensible to other kind of image files (parameter inside *if* statement)
 2. Creating new folder in parent directory
 3. Copying all those images in the new folder
-<<<<<<< HEAD
-=======
 
-*Aim: make it portable. i.e. NOT using std::filesystem nor any boost dependencies
 *Aim: make it w Python
->>>>>>> 66915fc32fbf12e26a2f66d58bf9cf1f32ad6b4f
