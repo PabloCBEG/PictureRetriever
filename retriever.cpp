@@ -53,6 +53,7 @@ int main()
 void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
 {
   //create a new folder for the pictures
+
   cwd = current_path();                       //store current directory name in pointer to char cwd
   aux = cwd;                                  //auxiliar variable for future operations
   cwd /= "todas_las_imagenes";                //append new folder name to current directory path
@@ -68,6 +69,7 @@ void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
 {
   //iterates current dir; generates a path list
+
   recursive_directory_iterator it;  //variable of type rec.dir.iterator so it can be used as a "pointer" to the current directory when iterating
   //searching for .jpg images, extended to any image extension: .jpeg, .tiff, .png, .jfif
   for (const auto & file : it = recursive_directory_iterator(aux))
@@ -102,13 +104,15 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
 
 void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
 {
+  //filters list: removes repeated files comparing size and date of modification. Works for images and video files.
+  //              different filtering criteria should be used for document files
+
   uint32_t i, j;
   lista_archivos_aux = lista_archivos;
   for(i = 0; i < lista_archivos.size(); i++)
   {
     for(j = 0; j < lista_archivos.size(); j++)
     {
-
       if(lista_archivos.at(i).filename() == lista_archivos.at(j).filename() && i != j && lista_archivos_aux.at(i).filename() == lista_archivos_aux.at(j).filename()) //fs::path(lista_archivos.at(i)).compare(lista_archivos.at(j)) && i != j
       {
         //filtering condition
@@ -158,10 +162,12 @@ void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_a
     cwd = aux2;
 
     // Show all errors concerning filesystem
-    try{
-        fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
-    } catch(fs::filesystem_error& e)  //arreglar: o comparar size, o no overwrite, sino duplicar.
-    {                                 //o comparando fecha de captura (metadata, detalles)
+    try
+    {
+      fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
+    }
+    catch(fs::filesystem_error& e)
+    {
       std::cout << "Error: " << e.what() << endl;
     }
   }
