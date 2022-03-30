@@ -12,5 +12,6 @@ The action includes:
 
 Note:
 1. Added video files
+2. Won't by the moment detect equal files if they have different names. Could be added: not needed.
 
 *Aim: make it w Python
