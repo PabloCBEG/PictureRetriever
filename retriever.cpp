@@ -22,6 +22,7 @@ using fs::current_path;
 using fs::directory_iterator;
 using fs::recursive_directory_iterator;
 using fs::copy_options;
+using std::basic_string;
 
 //This is the source for Picture Retriever algorithm
 //It'll work it all out. When built, generates an executable which works ON WINDOWS
@@ -53,15 +54,19 @@ int main()
 void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
 {
   //create a new folder for the pictures
-  cout << "Introduzca la ruta completa del directorio donde quiere realizar la búsqueda: " << endl;
-  cin >> cwd;                       //store current directory name in pointer to char cwd
+
+  std::string saux;
+  std::cout << "Introduzca la ruta completa del directorio donde quiere realizar la busqueda: ";
+  std::getline(std::cin, saux);               
+  cwd = saux;                                 //store target directory name in path cwd
+  cout << fs::path(cwd) << endl;
   aux = cwd;                                  //auxiliar variable for future operations
   cwd /= "todas_las_imagenes";                //append new folder name to current directory path
   aux2 = cwd;                                 //save this path too, for the future (for cwd'll be later manipulated)
 
   if(create_directory(cwd) == -1)             //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
-  else ;//cout << "Directorio generado" << endl; //just for debugging
+  else ; cout << "Directorio generado" << endl; //just for debugging
 
   std::vector<fs::path> values {cwd, aux, aux2};
 }
