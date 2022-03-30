@@ -47,9 +47,9 @@ we'll work this out using batch files, .bat extension
 
 *OTHERS*
 1. *Vectors (C++)*
-  a) https://www.cplusplus.com/reference/vector/vector/push_back/
-  b) https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them
-  c) https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
+  a. https://www.cplusplus.com/reference/vector/vector/push_back/
+  b. https://www.tutorialspoint.com/how-to-print-out-the-contents-of-a-vector-in-cplusplus#:~:text=In%20the%20for%20loop%2C%20size,are%20passed%20to%20print%20them
+  c. https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
 2. *Strings*
   a) https://www.tutorialspoint.com/cplusplus-array-of-strings
   b) https://stackoverflow.com/questions/10847237/how-to-convert-from-int-to-char
@@ -59,6 +59,8 @@ we'll work this out using batch files, .bat extension
   a) https://www.ibm.com/docs/en/zos/2.4.0?topic=zos-xl-cc
 5. *Code optimization*
   a) https://www.windows-commandline.com/get-file-modified-date-time/
+6. *String input*
+  a) https://en.cppreference.com/w/cpp/string/basic_string/getline
 
 *Compiling to .exe*
   1. https://www.wikihow.com/Compile-CPP-File-to-EXE#:~:text=Type%20g%2B%2B%20yourprogram.,appear%20in%20the%20current%20folder.
