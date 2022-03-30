@@ -39,11 +39,15 @@ int main()
     fs::path cwd; fs::path aux; fs::path aux2;
     std::vector<fs::path> lista_archivos_aux;
 
+    cout << "Hold on while we work it out for you..." << endl;
+    
     createfolder(cwd, aux, aux2);
 
     iteratefolder(lista_archivos, aux);
 
     seekforimages(cwd, aux2, lista_archivos, lista_archivos_aux);
+
+    cout << "Done working. Thanks for waiting" << endl;
 }
 
 void createfolder(fs::path& cwd, fs::path& aux, fs::path& aux2)
@@ -105,7 +109,7 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
       it.disable_recursion_pending();
   }
   //cout << "Todo bien" << endl;
-  for(int i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl;}
+  //for(int i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl;}
 }
 
 void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
@@ -122,7 +126,9 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
         //filtering condition
         uint32_t tam1 = fs::file_size(lista_archivos.at(i));
         uint32_t tam2 = fs::file_size(lista_archivos.at(j));
-        if(tam1 == tam2)
+        fs::file_time_type dat1 = fs::last_write_time(lista_archivos.at(i));
+        fs::file_time_type dat2 = fs::last_write_time(lista_archivos.at(j)); //fs::file_time_type
+        if(tam1 == tam2 || dat1 == dat2)
         {
           lista_archivos.erase(lista_archivos.begin() + j);
           lista_archivos_aux.erase(lista_archivos_aux.begin() + j);
