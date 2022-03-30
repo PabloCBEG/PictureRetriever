@@ -74,32 +74,20 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
   {
     lista_archivos.push_back(file.path());  //adding new found file to the end of the vector
 
-    if((file.path().extension() == ".jpg") ||
-      (file.path().extension() == ".JPG") ||
-      (file.path().extension() == ".png") ||
-      (file.path().extension() == ".PNG") ||
-      (file.path().extension() == ".tiff") ||
-      (file.path().extension() == ".TIFF") ||
-      (file.path().extension() == ".jfif") ||
-      (file.path().extension() == ".JFIF") ||
-      (file.path().extension() == ".jpeg") ||
-      (file.path().extension() == ".JPEG") ||
-      (file.path().extension() == ".svg") ||
-      (file.path().extension() == ".SVG") ||
+    if((file.path().extension() == ".jpg") || (file.path().extension() == ".JPG") ||
+      (file.path().extension() == ".png") || (file.path().extension() == ".PNG") ||
+      (file.path().extension() == ".tiff") || (file.path().extension() == ".TIFF") ||
+      (file.path().extension() == ".jfif") || (file.path().extension() == ".JFIF") ||
+      (file.path().extension() == ".jpeg") || (file.path().extension() == ".JPEG") ||
+      (file.path().extension() == ".svg") || (file.path().extension() == ".SVG") ||
       (file.path().extension() == ".mp4") || //akes a while o coy video files
       (file.path().extension() == ".MP4") ||
-      (file.path().extension() == ".mkv") ||
-      (file.path().extension() == ".MKV") ||
-      (file.path().extension() == ".gif") ||
-      (file.path().extension() == ".GIF") ||
-      (file.path().extension() == ".avi") ||
-      (file.path().extension() == ".AVI") ||
-      (file.path().extension() == ".mov") ||
-      (file.path().extension() == ".MOV") ||
-      (file.path().extension() == ".m4p") ||
-      (file.path().extension() == ".M4P") ||
-      (file.path().extension() == ".m4v") ||
-      (file.path().extension() == ".M4V"));
+      (file.path().extension() == ".mkv") || (file.path().extension() == ".MKV") ||
+      (file.path().extension() == ".gif") || (file.path().extension() == ".GIF") ||
+      (file.path().extension() == ".avi") || (file.path().extension() == ".AVI") ||
+      (file.path().extension() == ".mov") || (file.path().extension() == ".MOV") ||
+      (file.path().extension() == ".m4p") || (file.path().extension() == ".M4P") ||
+      (file.path().extension() == ".m4v") || (file.path().extension() == ".M4V"));
     else 
     {
       lista_archivos.pop_back();
