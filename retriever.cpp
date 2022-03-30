@@ -42,8 +42,7 @@ int main()
     createfolder(cwd, aux, aux2);
 
     iteratefolder(lista_archivos, aux);
-  //cout << "todo bien" << endl;
-  //cout << "todo bien" << endl;
+
     seekforimages(cwd, aux2, lista_archivos, lista_archivos_aux);
 }
 
@@ -80,7 +79,23 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
       (file.path().extension() == ".jfif") ||
       (file.path().extension() == ".JFIF") ||
       (file.path().extension() == ".jpeg") ||
-      (file.path().extension() == ".JPEG"));
+      (file.path().extension() == ".JPEG") ||
+      (file.path().extension() == ".svg") ||
+      (file.path().extension() == ".SVG") ||
+      (file.path().extension() == ".mp4") || //akes a while o coy video files
+      (file.path().extension() == ".MP4") ||
+      (file.path().extension() == ".mkv") ||
+      (file.path().extension() == ".MKV") ||
+      (file.path().extension() == ".gif") ||
+      (file.path().extension() == ".GIF") ||
+      (file.path().extension() == ".avi") ||
+      (file.path().extension() == ".AVI") ||
+      (file.path().extension() == ".mov") ||
+      (file.path().extension() == ".MOV") ||
+      (file.path().extension() == ".m4p") ||
+      (file.path().extension() == ".M4P") ||
+      (file.path().extension() == ".m4v") ||
+      (file.path().extension() == ".M4V"));
     else 
     {
       lista_archivos.pop_back();
@@ -89,6 +104,8 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
     if(fs::current_path().filename() == "todas_las_imagenes") //not entering newly created folder, for I'd found duplicates
       it.disable_recursion_pending();
   }
+  //cout << "Todo bien" << endl;
+  for(int i = 0; i < lista_archivos.size(); i++){ cout << fs::path(lista_archivos.at(i)) << endl;}
 }
 
 void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
@@ -102,6 +119,7 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
 
       if(lista_archivos.at(i).filename() == lista_archivos.at(j).filename() && i != j && lista_archivos_aux.at(i).filename() == lista_archivos_aux.at(j).filename()) //fs::path(lista_archivos.at(i)).compare(lista_archivos.at(j)) && i != j
       {
+        //filtering condition
         uint32_t tam1 = fs::file_size(lista_archivos.at(i));
         uint32_t tam2 = fs::file_size(lista_archivos.at(j));
         if(tam1 == tam2)
@@ -147,9 +165,6 @@ void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_a
 
     // Show all errors concerning filesystem
     try{
-
-        //fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::skip_existing);
-
         fs::copy_file((const fs::path)lista_archivos.at(indice), cwd /= imagen, copy_options::overwrite_existing);
     } catch(fs::filesystem_error& e)  //arreglar: o comparar size, o no overwrite, sino duplicar.
     {                                 //o comparando fecha de captura (metadata, detalles)
@@ -157,10 +172,3 @@ void seekforimages(fs::path& cwd, fs::path& aux2, std::vector<fs::path>& lista_a
     }
   }
 }
-
-//to check filesize:
-/*
-  Create a new vector object: there we'll store different file sizes.
-  Compare new file name to the whole list of already registered files. ONLY images.
-  IF two files have same name, we'll compare their sizes.
-*/
