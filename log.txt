@@ -1,13 +1,16 @@
 ***********Log file: we'll be logging progress and actions undertaken through this project here***********
 // Pablo Carmona Benito - Internship at AVS - Added Value Solutions. 7 mar 2022 - 7 jun 2022
 
-7 mar - presentation and initial approach to the problem: retrieving pictures of a project from the folders containing project's information. Stages definition: version 1 must be able to find IMAGE files (.jpg, .jpeg, .png, .tiff ...); version 2 should be able to get also images included in other files (i.e. in a .pdf). *Some research is needed in order to assure this is possible.
+7 mar - presentation and initial approach to the problem: retrieving pictures of a project from the folders containing project's information. Stages definition:
+      version 1 must be able to find IMAGE files (.jpg, .jpeg, .png, .tiff ...); version 2 should be able to get also images included in other files (i.e. in a .pdf).
+      *Some research is needed in order to assure this is possible.
 
 8 mar - coding starts. Work'll be done using:
       · VS Code / Atom
       · DevC++
       · GitHub
-      Some extra software needs to be installed: MinGW compiler and extensions for C/C++. Particularly, C++17 is needed, and the "filesystem" package from "boost" library
+      Some extra software needs to be installed: MinGW compiler and extensions for C/C++. Particularly, C++17 is needed, and the "filesystem" package from "boost"
+      library
 
 9 mar - permission achieved to install MinGW on AVS computer. Coding goes on (see sources.txt to find the references used). A program is created which allows to create new directories inside of another one.
 
@@ -26,7 +29,8 @@
 18 mar - successfully fulfilled coding tasks involved in V1. Code works properly. Code is to be arranged and cleaned. If on time, functional .exe will be generated.
          In order to the code to be more ordered, following modifications are needed:
          - Creating global variables to deal with needed parameters OR PREFERABLY creating functions that get those parameters and give them back properly edited
-         - No library will be created by now, since it's an easy program, there'll be no more than 3 or 4 functions, and inserting and using libraries might be risky with executable or batch files. Also it's a pain for system migration.
+         - No library will be created by now, since it's an easy program, there'll be no more than 3 or 4 functions, and inserting and using libraries might be risky 
+           with executable or batch files. Also it's a pain for system migration.
        - successfully generated functional .exe program which works on Windows
 
 21 mar - clarifyng comments added, useless comments and variables deleted, synchronized with the repo, started report of V1
@@ -44,13 +48,14 @@
 29 mar - catalogue work
 
 30 mar - made needed changes so that program filters video files too. Working version. Also added filtering condition: check last modification date; if two files in
-list have same modification date, they'll be suspected to be the same file. I discourage using this filter condition alone, for two files may have different
-modification dates and still be the same file. Size condition looks robust, and combining both is robust for sure. We'll shallowly test for operation time and then
-decide if size condition is to be used on its own, or it'll be combined w/ date information
+         list have same modification date, they'll be suspected to be the same file. I discourage using this filter condition alone, for two files may have different
+         modification dates and still be the same file. Size condition looks robust, and combining both is robust for sure. We'll shallowly test for operation time and
+         then decide if size condition is to be used on its own, or it'll be combined w/ date information
 
 31 mar - quick testing for the code: modification date condition can lead to some troubles. Images vary their modification date for several reasons. What we'll do:
          we'll leave the date variables and comment the date condition, so it is there for anyone who wants to use it; but program'll be compiled w/out the condition.
          Uploaded final v2. Proceed to test it w large folders and files, videos, and different versions of windows. Research on doing it for MAC and Linux.
+         Problem arises w AG's computer. Same problem for v1.4. Proceed to check.
 
 1 apr
 
