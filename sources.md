@@ -73,6 +73,7 @@ we'll work this out using batch files, .bat extension
   4. https://docs.microsoft.com/es-es/windows/win32/api/fileapi/nf-fileapi-findfirstfilea?redirectedfrom=MSDN
   5. https://en.cppreference.com/w/cpp/filesystem/path/append
   6. https://en.cppreference.com/w/cpp/filesystem/path/extension
+  7. https://en.cppreference.com/w/cpp/filesystem/path/replace_extension
   
 *Paths and recursive iterator stuff: don't wanna go over my new folder*
   1. https://stackoverflow.com/questions/47865960/stdexperimentalfilesystemrecursive-directory-iterator-skip-folder-and-its
