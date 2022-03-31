@@ -35,6 +35,7 @@ we'll work this out using batch files, .bat extension
   1. https://stackoverflow.com/questions/5840148/how-can-i-get-a-files-size-in-c
   2. https://techoverflow.net/2013/08/21/how-to-get-filesize-using-stat-in-cc/
   3. https://pubs.opengroup.org/onlinepubs/007904875/basedefs/sys/stat.h.html
+  4. https://stackoverflow.com/questions/5840148/how-can-i-get-a-files-size-in-c++
 
 *File modification time*
   1. https://stackoverflow.com/questions/40504281/c-how-to-check-the-last-modified-time-of-a-file
