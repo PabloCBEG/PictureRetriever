@@ -50,6 +50,7 @@ decide if size condition is to be used on its own, or it'll be combined w/ date 
 
 31 mar - quick testing for the code: modification date condition can lead to some troubles. Images vary their modification date for several reasons. What we'll do:
          we'll leave the date variables and comment the date condition, so it is there for anyone who wants to use it; but program'll be compiled w/out the condition.
+         Uploaded final v2. Proceed to test it w large folders and files, videos, and different versions of windows. Research on doing it for MAC and Linux.
 
 1 apr
 
