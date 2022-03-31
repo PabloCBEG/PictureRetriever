@@ -56,6 +56,12 @@
          we'll leave the date variables and comment the date condition, so it is there for anyone who wants to use it; but program'll be compiled w/out the condition.
          Uploaded final v2. Proceed to test it w large folders and files, videos, and different versions of windows. Research on doing it for MAC and Linux.
          Problem arises w AG's computer. Same problem for v1.4. Proceed to check.
+         Añadir la condición de comprobación de la fecha de CAPTURA. No la de modificación.
+         Pendiente también la gestión de errores: si el directorio especificado no existe, o se introduce 
+         “ “, poner opciones por defecto. Asimismo, si una imagen no tiene fecha de captura, filtrar solo con el tamaño? Mostrar mensaje de error, o guardar 
+         simplemente las dos copias?
+         Parece que tenemos un error cuando las rutas pertenecen a discos distintos, y distintos del local en particular. En el ordenador de la oficina, tengo 
+         problemas cuando la operación se realiza de W: a D: o a C:.
 
 1 apr
 
