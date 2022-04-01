@@ -80,7 +80,7 @@ void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::pat
 
   if(create_directory(destinydirectory) == -1)  //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
-  else ; //cout << "Directorio generado" << endl; //just for debugging
+  else ; cout << "Directorio generado" << endl; //just for debugging
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
@@ -113,7 +113,7 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
     {
       lista_archivos.pop_back();
     }
-    
+    cout << "Lista generada" << endl;
     if(fs::current_path().filename() == "todas_las_imagenes") //not entering newly created folder, for I'd found duplicates
       it.disable_recursion_pending();
   }
