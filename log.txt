@@ -63,9 +63,10 @@
          Parece que tenemos un error cuando las rutas pertenecen a discos distintos, y distintos del local en particular. En el ordenador de la oficina, tengo 
          problemas cuando la operación se realiza de W: a D: o a C:.
 
-1 apr
+1 apr - catalogue work
 
-4 apr
+4 apr - still looking for fault in program which keeps it from working correctly. Problem seems to be when copying images FROM FUS047 QCHECK_IVBD (TO#17). Every other
+        folder works properly.
 
 5 apr
 
