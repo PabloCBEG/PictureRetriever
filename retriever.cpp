@@ -65,7 +65,7 @@ int main()
 void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::path& aux, fs::path& aux2)
 {
   //create a new folder for the pictures
-
+  cout << "createfolder inicio" << endl;
   std::string saux;                         //auxiliary string variable to store cin input
   //Ask for target directory
   std::cout << "Introduzca la ruta completa del directorio donde quiere realizar la busqueda: ";
@@ -84,13 +84,15 @@ void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::pat
   if(create_directory(destinydirectory) == -1)  //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
   else ; cout << "Directorio generado" << endl; //just for debugging
+
+  cout << "createfolder final" << endl;
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
 {
   //iterates current dir; generates a path list
   //uses targetdirectory (aux must be targetdirectory)
-
+  cout << "iteratefolder inicio" << endl;
   recursive_directory_iterator it;  //variable of type rec.dir.iterator so it can be used as
                                     //a "pointer" to the current directory when iterating
   //searching for .jpg, .jpeg, .tiff, .png, .jfif, images, and videos
@@ -120,13 +122,14 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
     if(fs::current_path().filename() == "todas_las_imagenes") //not entering newly created folder, for I'd found duplicates
       it.disable_recursion_pending();
   }
+  cout << "iteratefolder final" << endl;
 }
 
 void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
 {
   //filters list: removes repeated files comparing size and date of modification. Works for images and video files.
   //              different filtering criteria should be used for document files
-  cout << "hemos llegado 1" << endl;
+  cout << "filterlist inicio" << endl;
   uint32_t i, j;  //local indices for "for" loops
   lista_archivos_aux = lista_archivos;  //auxiliary file list used for comparison and renaming
   for(i = 0; i < lista_archivos.size(); i++)
@@ -163,7 +166,7 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
       }
     }
   }
-  cout << "hemos llegado 2" << endl;
+  cout << "filterlist final" << endl;
 }
 
 void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
@@ -176,7 +179,7 @@ void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::p
 
   //First of all, we filter the list to erase repeated files
   filterlist(lista_archivos, lista_archivos_aux);
-  cout << "hemos llegado 3" << endl;
+  cout << "seekforimages inicio" << endl;
   for(indice = 0; indice < lista_archivos.size(); indice++)
   {
     imagen = lista_archivos_aux.at(indice).filename();
@@ -197,5 +200,5 @@ void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::p
       std::cout << "Error: " << e.what() << endl;
     }
   }
-  cout << "hemos llegado 4" << endl;
+  cout << "seekforimages final" << endl;
 }
