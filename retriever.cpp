@@ -58,6 +58,8 @@ int main()
     seekforimages(destinydirectory, aux2, lista_archivos, lista_archivos_aux);
 
     cout << "Done working. Thanks for waiting" << endl;
+
+    system("pause");
 }
 
 void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::path& aux, fs::path& aux2)
