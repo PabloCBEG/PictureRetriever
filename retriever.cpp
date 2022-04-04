@@ -10,6 +10,7 @@
 #include <filesystem>
 #include <sys/stat.h>
 #include <sstream>
+#include <gdiplus.h>
 
 namespace fs = std::filesystem;
 
@@ -74,7 +75,7 @@ void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::pat
   std::getline(std::cin, saux);             //just in case route contains blankspaces
   destinydirectory = saux;
 
-  aux = targetdirectory;                    //auxiliar variable for future operations
+  aux = targetdirectory;                    //auxiliary variable for future operations
   destinydirectory /= "todas_las_imagenes"; //append new folder name to current directory path
   aux2 = destinydirectory;                  //save this path too, for the future (for cwd'll be later manipulated)
 
