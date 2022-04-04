@@ -126,7 +126,7 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
 {
   //filters list: removes repeated files comparing size and date of modification. Works for images and video files.
   //              different filtering criteria should be used for document files
-
+  cout << "hemos llegado 1" << endl;
   uint32_t i, j;  //local indices for "for" loops
   lista_archivos_aux = lista_archivos;  //auxiliary file list used for comparison and renaming
   for(i = 0; i < lista_archivos.size(); i++)
@@ -163,19 +163,20 @@ void filterlist(std::vector<fs::path>& lista_archivos, std::vector<fs::path>& li
       }
     }
   }
+  cout << "hemos llegado 2" << endl;
 }
 
 void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::path>& lista_archivos, std::vector<fs::path>& lista_archivos_aux)
 {
   //looks for the images and COPIES them to the desired folder (new folder created)
   //uses destinydirectory: aux2 must be destinydirectory
-  cout << "hemos llegado" << endl;
+  //cout << "hemos llegado" << endl;
   uint32_t indice;  //index for looping file list
   fs::path imagen;  //variable to store filename and append it to destiny directory route
 
   //First of all, we filter the list to erase repeated files
   filterlist(lista_archivos, lista_archivos_aux);
-
+  cout << "hemos llegado 3" << endl;
   for(indice = 0; indice < lista_archivos.size(); indice++)
   {
     imagen = lista_archivos_aux.at(indice).filename();
@@ -196,4 +197,5 @@ void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::p
       std::cout << "Error: " << e.what() << endl;
     }
   }
+  cout << "hemos llegado 4" << endl;
 }
