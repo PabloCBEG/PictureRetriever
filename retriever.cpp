@@ -10,7 +10,7 @@
 #include <filesystem>
 #include <sys/stat.h>
 #include <sstream>
-#include <gdiplus.h>
+//#include <gdiplus.h>
 
 namespace fs = std::filesystem;
 
@@ -82,6 +82,7 @@ void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::pat
   if(create_directory(destinydirectory) == -1)  //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
   else ; cout << "Directorio generado" << endl; //just for debugging
+  cout << "todo bien" << endl;
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
