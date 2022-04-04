@@ -82,7 +82,6 @@ void createfolder(fs::path& targetdirectory, fs::path& destinydirectory, fs::pat
   if(create_directory(destinydirectory) == -1)  //both create directory and check it was succesful //rmdir for removing
     cerr << "Error al crear el directorio: " << strerror(errno) << endl;
   else ; cout << "Directorio generado" << endl; //just for debugging
-  cout << "todo bien" << endl;
 }
 
 void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
@@ -115,7 +114,7 @@ void iteratefolder(std::vector<fs::path>& lista_archivos, fs::path& aux)
     {
       lista_archivos.pop_back();
     }
-    cout << "Lista generada" << endl;
+    //cout << "Lista generada" << endl;
     if(fs::current_path().filename() == "todas_las_imagenes") //not entering newly created folder, for I'd found duplicates
       it.disable_recursion_pending();
   }
@@ -168,7 +167,7 @@ void seekforimages(fs::path& destinydirectory, fs::path& aux2, std::vector<fs::p
 {
   //looks for the images and COPIES them to the desired folder (new folder created)
   //uses destinydirectory: aux2 must be destinydirectory
-
+  cout << "hemos llegado" << endl;
   uint32_t indice;  //index for looping file list
   fs::path imagen;  //variable to store filename and append it to destiny directory route
 
