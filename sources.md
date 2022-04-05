@@ -41,6 +41,7 @@ we'll work this out using batch files, .bat extension
   1. https://stackoverflow.com/questions/40504281/c-how-to-check-the-last-modified-time-of-a-file
   2. https://en.cppreference.com/w/cpp/filesystem/last_write_time
   3. https://www.windows-commandline.com/get-file-modified-date-time/
+  4. http://www.cplusplus.com/forum/windows/87289/
 
 *Image properties*
   1. https://stackoverflow.com/questions/35269382/extract-dates-exif-of-images-at-c-in-variables
@@ -53,6 +54,7 @@ we'll work this out using batch files, .bat extension
   8. https://opencv.org/
   9. https://opencv.org/releases/
   10. https://docs.opencv.org/4.5.5/d1/dfb/intro.html
+  11. https://stackoverflow.com/questions/44274658/how-to-read-image-description-from-the-image-with-c-or-python
 
 *IN PYTHON*
   1. https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
