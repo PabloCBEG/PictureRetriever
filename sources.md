@@ -42,6 +42,18 @@ we'll work this out using batch files, .bat extension
   2. https://en.cppreference.com/w/cpp/filesystem/last_write_time
   3. https://www.windows-commandline.com/get-file-modified-date-time/
 
+*Image properties*
+  1. https://stackoverflow.com/questions/35269382/extract-dates-exif-of-images-at-c-in-variables
+  2. https://docs.microsoft.com/fr-fr/windows/win32/gdiplus/-gdiplus-reading-and-writing-metadata-use?redirectedfrom=MSDN
+  3. https://docs.microsoft.com/fr-fr/windows/win32/gdiplus/-gdiplus-constant-property-item-descriptions?redirectedfrom=MSDN
+  4. https://www.google.com/search?q=image+file+metadata+c%2B%2B&rlz=1C1CHBF_esES816ES828&oq=image+file+metadata+c%2B%2B&aqs=chrome..69i57j33i22i29i30.4044j0j15&sourceid=chrome&ie=UTF-8
+  5. https://stackoverflow.com/questions/48949844/displaying-an-image-and-its-metadata-in-c
+  6. https://exiv2.org/
+  7. https://stackoverflow.com/questions/10007789/are-gdi-gdi-and-opengl-really-obsolete-deprecated
+  8. https://opencv.org/
+  9. https://opencv.org/releases/
+  10. https://docs.opencv.org/4.5.5/d1/dfb/intro.html
+
 *IN PYTHON*
   1. https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
   2. https://www.delftstack.com/howto/python/how-to-find-files-with-certain-extension-only-in-python/
