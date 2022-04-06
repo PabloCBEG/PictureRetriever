@@ -115,14 +115,13 @@ we'll work this out using batch files, .bat extension
 
 *COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working*
   1. C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
-  
-  1. https://code.visualstudio.com/docs/cpp/config-msvc
-  2. https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
+  2. https://code.visualstudio.com/docs/cpp/config-msvc
+  3. https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
   
 *DEBUGGING*
   1. https://stackoverflow.com/questions/315948/c-catching-all-exceptions
   2. https://docs.microsoft.com/en-us/cpp/cpp/try-throw-and-catch-statements-cpp?view=msvc-170
-  
+  ---
   1. https://nuwen.net/mingw.html
   2. https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/
   3. https://www.codingame.com/playgrounds/5659/c17-filesystem
