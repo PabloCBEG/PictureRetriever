@@ -112,11 +112,14 @@ we'll work this out using batch files, .bat extension
   9. https://githubhot.com/index.php/repo/winget-run/wingetdotrun/issues/9
   10. https://github.com/libexpat/libexpat/releases
   11. https://github.com/Unidata/UDUNITS-2/issues/18
+  12. https://svn.apache.org/repos/asf/apr/apr-util/vendor/expat/1.95.2/doc/reference.html
+  13. https://www.xml.com/pub/1999/09/expat/reference.html
 
 *COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working*
   1. C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
   2. https://code.visualstudio.com/docs/cpp/config-msvc
   3. https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
+  4. https://gcc.gnu.org/gcc-11/changes.html
   
 *DEBUGGING*
   1. https://stackoverflow.com/questions/315948/c-catching-all-exceptions
