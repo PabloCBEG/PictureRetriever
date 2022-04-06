@@ -100,6 +100,19 @@ we'll work this out using batch files, .bat extension
   4. https://www.boost.org/users/history/version_1_77_0.html
   5. https://www.codingame.com/playgrounds/5659/c17-filesystem
 
+*Exiv2*
+  1. https://exiv2.org/download.html
+  2. https://github.com/Exiv2/exiv2#B_I_U_VisualStudio
+  3. https://stackoverflow.com/questions/32801638/cmake-error-at-cmakelists-txt30-project-no-cmake-c-compiler-could-be-found
+  4. https://stackoverflow.com/questions/23529103/geant4-does-not-find-expat-library
+  5. https://devblogs.microsoft.com/commandline/windows-package-manager-1-0/
+  6. https://stackoverflow.com/questions/3127589/compile-expat-to-statically-linked-a-on-windows
+  7. https://stackoverflow.com/questions/5953307/getting-mingw-get-to-install-correctly-mingw-msys-path-missing-plus-more
+  8. https://blog.actorsfit.com/a?ID=01750-98ba089a-9f44-4d17-9e86-29d029ecb493
+  9. https://githubhot.com/index.php/repo/winget-run/wingetdotrun/issues/9
+  10. https://github.com/libexpat/libexpat/releases
+  11. https://github.com/Unidata/UDUNITS-2/issues/18
+
 *COMPILER PATH cl.exe TO SET IN VSCODE IF MINGW ain´t working*
   1. C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe
   
