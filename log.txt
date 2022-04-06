@@ -70,7 +70,12 @@
 
 5 apr
 
-6 apr
+6 apr - C:\Program Files (x86)\Expat 2.4.8\Source\lib\expat.h
+        C:\Program Files\exiv2\include\exiv2\xmp_exiv2.hpp
+        C:\Program Files\exiv2\include\exiv2\exiv2.hpp
+        C:\Program Files\exiv2\src\xmp.cpp
+        C:\Program Files\exiv2\src\exiv2.cpp
+        C:\Program Files (x86)\Expat 2.4.8\Source\lib\xmlparse.c
 
 7 apr
 
