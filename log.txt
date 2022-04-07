@@ -67,29 +67,34 @@
 
 4 apr - still looking for fault in program which keeps it from working correctly. Problem seems to be when copying images FROM FUS047 QCHECK_IVBD (TO#17). Every other
         folder works properly.
+        FUS047 didn't work because it has no images, no videos. Suspect went to copying across drives: but after testing on several computers, it was determined
+        that the problem was in one of the computers: worked properly on every other. 
+        Hence program is working as desired, just safety fixes and aesthetic matters left.
 
-5 apr
+5 apr - research on metadata manipulation in c++
 
-6 apr - C:\Program Files (x86)\Expat 2.4.8\Source\lib\expat.h
+6 apr - research in progress.
+        C:\Program Files (x86)\Expat 2.4.8\Source\lib\expat.h
         C:\Program Files\exiv2\include\exiv2\xmp_exiv2.hpp
         C:\Program Files\exiv2\include\exiv2\exiv2.hpp
         C:\Program Files\exiv2\src\xmp.cpp
         C:\Program Files\exiv2\src\exiv2.cpp
         C:\Program Files (x86)\Expat 2.4.8\Source\lib\xmlparse.c
+        No success installing exiv2 by now
 
-7 apr
+7 apr - catalogue work
 
 8 apr
 
-11 apr
+*11 apr*
 
-12 apr
+*12 apr*
 
-13 apr
+*13 apr*
 
-14 apr
+*14 apr*
 
-15 apr
+*15 apr*
 
 18 apr
 
