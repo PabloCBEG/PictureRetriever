@@ -14,5 +14,8 @@ Note:
 1. Added video files
 2. Won't by the moment detect equal files if they have different names. Could be added: not needed.
 
+Further modifications:
+1. It being able to eliminate copies of the same image or video when they've got different names.
+
 *Aim: make it w Python
-*Check this out: https://www.perl.org/
+
