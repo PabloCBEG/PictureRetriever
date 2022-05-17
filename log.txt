@@ -71,7 +71,7 @@
         that the problem was in one of the computers: worked properly on every other. 
         Hence program is working as desired, just safety fixes and aesthetic matters left.
 
-5 apr - research on metadata manipulation in c++
+5 apr - research on image metadata manipulation in c++
 
 6 apr - research in progress.
         C:\Program Files (x86)\Expat 2.4.8\Source\lib\expat.h
@@ -84,19 +84,19 @@
 
 7 apr - catalogue work
 
-8 apr
+8 apr - OpenCV options. Research in progress. Exiv2 looks like a good option.
 
-*11 apr*
+*11 apr* - Holiday
 
-*12 apr*
+*12 apr* - Holiday
 
-*13 apr*
+*13 apr* - Holiday
 
-*14 apr*
+*14 apr* - Holiday
 
-*15 apr*
+*15 apr* - Holiday
 
-18 apr
+18 apr - New task assigned: tolerance chain computing for a CXRS diagnostic system in ITER. Will keep logging at: https://docs.google.com/document/d/1I1jhPo0VpgH2UDht_4gl-3UacImzub0KsmDg-AGoj3s/edit?usp=sharing
 
 19 apr
 
@@ -116,15 +116,15 @@
 
 29 apr
 
-2 may
+2 may - Holiday
 
-3 may
+3 may - Holiday
 
-4 may
+4 may - Holiday
 
-5 may
+5 may - Holiday
 
-6 may
+6 may - Holiday
 
 9 may
 
