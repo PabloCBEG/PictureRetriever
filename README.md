@@ -16,6 +16,7 @@ Note:
 
 Further modifications:
 1. It being able to eliminate copies of the same image or video when they've got different names.
+2. Accessing image metadata in order to being able to check the shot date
 
 *Aim: make it w Python
 
